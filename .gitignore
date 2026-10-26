@@ -1,0 +1,36 @@
+# Visual Studio 生成与用户级文件
+.vs/
+*.user
+*.suo
+*.VC.db
+*.VC.VC.opendb
+*.sln.docstates
+
+# 生成目录
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+ARM/
+ARM64/
+*.ilk
+*.pdb
+*.idb
+*.exp
+*.lib
+*.obj
+*.tlog
+*.log
+
+# 编译产物
+*.exe
+*.dll
+*.o
+*.out
+
+# 系统文件
+Thumbs.db
+desktop.ini
+.DS_Store
