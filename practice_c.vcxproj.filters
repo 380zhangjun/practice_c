@@ -15,10 +15,10 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="1_while循环_练习.c">
+    <ClCompile Include="2jkdsfj.c">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="2jkdsfj.c">
+    <ClCompile Include="for嵌套.c">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
