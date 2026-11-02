@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    int n = 0;
+    
+    n = 3;int i = 1;int j = 1;
+    for (i = 1; i < n; i++)
+    {
+        j *= 10;
+    }
+    for ( i=j; i < 10*j; i++)
+    {
+        int m = i;
+        int sum = 0;
+        while (m != 0) {
+            int p = 0;
+            p = m % 10;int a = 0;int b = p;
+            m /= 10;
+            for (a = 1; a < n; a++)
+            {
+                b *= p;
+            }sum += b;
+        }if (sum == i)
+        {
+            printf("%d\n", i);
+        }
+
+    }
+    return 0;
+}
