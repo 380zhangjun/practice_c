@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="2jkdsfj.c" />
+    <ClCompile Include="整数求逆.c" />
     <ClCompile Include="水仙花树.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
