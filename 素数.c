@@ -17,7 +17,7 @@ int main(void)
     }
     else
     {
-        /* 只需试除到 sqrt(a) 即可，等价于 i <= a / i */
+        /* 只需试除到 sqrt(a)，等价写法 i <= a / i */
         for (i = 2; i * i <= a; i++)
         {
             if (a % i == 0)
