@@ -1,30 +1,51 @@
 #include <stdio.h>
+
+/// 求 n 位水仙花数：各位数字的 n 次幂之和等于该数本身
 int main()
 {
     int n = 0;
-    
-    n = 3;int i = 1;int j = 1;
+    int i = 1;
+    int j = 1;
+
+    /// n 表示位数，固定为 3（即三位水仙花数）
+    n = 3;
+
+    /// j 最终变成 10^(n-1)，也就是 n 位数的最小值（n=3 时为 100）
     for (i = 1; i < n; i++)
     {
         j *= 10;
     }
-    for ( i=j; i < 10*j; i++)
+
+    /// 遍历所有 n 位数（100 ~ 999）
+    for (i = j; i < 10 * j; i++)
     {
-        int m = i;
-        int sum = 0;
-        while (m != 0) {
+        int m = i;      /// m 是 i 的副本，拆位时会不断除以 10
+        int sum = 0;    /// 存放各位数字的 n 次幂之和
+
+        /// 反复取最低位，直到 m 被拆完
+        while (m != 0)
+        {
             int p = 0;
-            p = m % 10;int a = 0;int b = p;
-            m /= 10;
+            p = m % 10;         /// p = 当前最低位数字
+            int a = 0;
+            int b = p;          /// b 从 p 的 1 次幂开始
+            m /= 10;            /// 去掉已经取走的最低位
+
+            /// 再乘 n-1 次，得到 p 的 n 次幂
             for (a = 1; a < n; a++)
             {
                 b *= p;
-            }sum += b;
-        }if (sum == i)
+            }
+
+            sum += b;           /// 把这一位的 n 次幂累加到 sum
+        }
+
+        /// 各位 n 次幂之和等于原数，就是水仙花数
+        if (sum == i)
         {
             printf("%d\n", i);
         }
-
     }
+
     return 0;
 }
